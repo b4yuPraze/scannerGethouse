@@ -117,7 +117,7 @@
 
     const updateFlashAvailability = () => {
         scanner.hasFlash().then(hasFlash => {
-            camHasFlash.textContent = hasFlash;
+            // camHasFlash.textContent = hasFlash;
             flashToggle.style.display = hasFlash ? 'inline-block' : 'none';
         });
     };
