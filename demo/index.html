@@ -50,7 +50,7 @@
         // console.log(result.data);
 
         $.ajax({
-          url: 'http://localhost/projects/skripsi/joki/diah/myapp/public/decrypt',
+          url: 'http://localhost/projects/skripsi/getHouse/public/administrator/viewPDF/',
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -140,9 +140,9 @@
     //     scanner.setCamera(event.target.value).then(updateFlashAvailability);
     // });
 
-    flashToggle.addEventListener('click', () => {
-        scanner.toggleFlash().then(() => flashState.textContent = scanner.isFlashOn() ? 'on' : 'off');
-    });
+    // flashToggle.addEventListener('click', () => {
+    //     scanner.toggleFlash().then(() => flashState.textContent = scanner.isFlashOn() ? 'on' : 'off');
+    // });
 
     document.getElementById('start-button').addEventListener('click', () => {
         scanner.start();
@@ -154,15 +154,15 @@
 
     // ####### File Scanning #######
 
-    fileSelector.addEventListener('change', event => {
-        const file = fileSelector.files[0];
-        if (!file) {
-            return;
-        }
-        QrScanner.scanImage(file, { returnDetailedScanResult: true })
-            .then(result => setResult(fileQrResult, result))
-            .catch(e => setResult(fileQrResult, { data: e || 'No QR code found.' }));
-    });
+    // fileSelector.addEventListener('change', event => {
+    //     const file = fileSelector.files[0];
+    //     if (!file) {
+    //         return;
+    //     }
+    //     QrScanner.scanImage(file, { returnDetailedScanResult: true })
+    //         .then(result => setResult(fileQrResult, result))
+    //         .catch(e => setResult(fileQrResult, { data: e || 'No QR code found.' }));
+    // });
 
 
 </script>
@@ -201,17 +201,17 @@
         stroke-dasharray: none !important;
     }
 
-    #flash-toggle {
+/*     #flash-toggle {
         display: none;
-    }
+    } */
 
     hr {
         margin-top: 32px;
     }
-    input[type="file"] {
+/*     input[type="file"] {
         display: block;
         margin-bottom: 16px;
-    }
+    } */
 </style>
 </body>
 </html>
