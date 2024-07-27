@@ -155,10 +155,14 @@
 
     document.getElementById('start-button').addEventListener('click', () => {
         scanner.start();
+        document.getElementById('start-button').style.display = "none"
+        document.getElementById('stop-button').style.display = "block"
     });
 
     document.getElementById('stop-button').addEventListener('click', () => {
         scanner.stop();
+        document.getElementById('start-button').style.display = "block"
+        document.getElementById('stop-button').style.display = "none"
     });
 
     // ####### File Scanning #######
